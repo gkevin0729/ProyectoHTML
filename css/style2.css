@@ -1,7 +1,101 @@
-/*Footer*/
-footer {
-    background-color: blue;
-    color: white;
+/* Reset básico y configuración tipográfica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Contenedor principal del footer */
+.site-footer {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding-top: 50px;
+    width: 100%;
+}
+
+/* Contenedor de las columnas */
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 0 20px 40px;
+}
+
+/* Estilos de cada columna */
+.footer-column {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #00d2ff;
+    position: relative;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li, .footer-column p {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #cccccc;
+}
+
+.footer-column ul li a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #00d2ff;
+}
+
+/* Iconos de Redes Sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #333333;
+    color: #ffffff;
     text-align: center;
-    padding: 20px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #00d2ff;
+    transform: translateY(-5px);
+}
+
+/* Barra inferior de derechos de autor */
+.footer-bottom {
+    background-color: #111111;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #888888;
+    border-top: 1px solid #333333;
+}
+
+/* Adaptabilidad a dispositivos móviles (Responsive) */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
 }
