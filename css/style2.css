@@ -1,5 +1,5 @@
 /* Reset básico y configuración tipográfica */
-* {
+.site-footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,7 +8,7 @@
 
 /* Contenedor principal del footer */
 .site-footer {
-    background-color: #1a1a1a;
+    background-color: #598520;
     color: #ffffff;
     padding-top: 50px;
     width: 100%;
