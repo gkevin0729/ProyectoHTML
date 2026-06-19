@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Proyectos | WQA Automation</title>
+
+    <link rel="stylesheet" href="../css/style5.css">
+</head>
+
+<body>
+<header class="encabezado">
+
+    <div class="encabezado-contenido">
+
+        <div class="logo">
+            <img src="../img/logo2.png" alt="WQA Automation">
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="html1.html">Inicio</a></li>
+                <li><a href="html2.html">¿Quiénes Somos?</a></li>
+                <li><a href="html3.html">Servicios</a></li>
+                <li><a href="html4.html">Galería</a></li>
+                <li><a href="html5.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+</header>
+    <!-- HERO -->
+
+    <section class="hero-gallery">
+
+        <h1>Galería de Proyectos</h1>
+
+        <p>
+            Descubre algunos de nuestros proyectos de automatización,
+            validación de software y aseguramiento de calidad.
+        </p>
+
+    </section>
+
+    <!-- CARRUSEL -->
+
+    <section class="gallery-section">
+
+        <div class="slider">
+
+            <button class="btn-slider prev">&#10094;</button>
+
+            <div class="slides">
+
+                <div class="slide active">
+                    <img src="../img/pyme.png" alt="Proyecto Selenium">
+                    <div class="caption">
+                        Framework de Automatización Selenium + Serenity BDD
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="../img/carrusel1.png" alt="Proyecto Appium">
+                    <div class="caption">
+                        Automatización Mobile Testing con Appium
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="../img//imagesApi.png" alt="Proyecto API">
+                    <div class="caption">
+                        Validación y Automatización de APIs REST
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="../img/QA-1.png" alt="Azure DevOps">
+                    <div class="caption">
+                        Gestión QA y Reportes en Azure DevOps
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn-slider next">&#10095;</button>
+
+        </div>
+
+    </section>
+
+    <!-- MINI GALERÍA -->
+
+    <section class="projects-grid">
+
+        <h2>Proyectos Destacados</h2>
+
+        <div class="grid">
+
+            <div class="project-card">
+                <img src="../img/carrusel2.png" alt="Framework">
+                <h3>Framework Web</h3>
+                <p>Selenium + Java + Serenity BDD</p>
+            </div>
+
+            <div class="project-card">
+                <img src="../img/androidSele.png" alt="Mobile">
+                <h3>Automatización Mobile</h3>
+                <p>Appium Android</p>
+            </div>
+
+            <div class="project-card">
+                <img src="../img/carrusel3.png" alt="Api">
+                <h3>API Testing</h3>
+                <p>Postman + REST Assured</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            &copy; 2026 WQA Automation | Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+    <script>
+
+        const slides = document.querySelectorAll('.slide');
+        const next = document.querySelector('.next');
+        const prev = document.querySelector('.prev');
+
+        let current = 0;
+
+        function showSlide(index){
+
+            slides.forEach(slide =>
+                slide.classList.remove('active')
+            );
+
+            slides[index].classList.add('active');
+        }
+
+        next.addEventListener('click', ()=>{
+
+            current++;
+
+            if(current >= slides.length){
+                current = 0;
+            }
+
+            showSlide(current);
+
+        });
+
+        prev.addEventListener('click', ()=>{
+
+            current--;
+
+            if(current < 0){
+                current = slides.length - 1;
+            }
+
+            showSlide(current);
+
+        });
+
+        setInterval(()=>{
+
+            current++;
+
+            if(current >= slides.length){
+                current = 0;
+            }
+
+            showSlide(current);
+
+        },5000);
+
+    </script>
+
+</body>
+
+</html>
