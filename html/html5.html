@@ -66,11 +66,11 @@
 
             <div class="social-links">
 
-                <a href="#">LinkedIn</a>
+                <a href="">LinkedIn</a>
 
-                <a href="#">GitHub</a>
+                <a href="https://github.com/repos?q=owner%3A%40me">GitHub</a>
 
-                <a href="#">WhatsApp</a>
+                <a href="https://wa.me/50761017746">WhatsApp</a>
 
             </div>
 
@@ -79,30 +79,30 @@
         <div class="contact-form">
 
             <h2>Envíanos un Mensaje</h2>
+<form action="https://formsubmit.co/gkevin0729@gmail.com" method="POST">
 
-            <form>
+    <input type="text" name="nombre" placeholder="Nombre Completo" required>
 
-                <input type="text"
-                       placeholder="Nombre Completo"
-                       required>
+    <input type="email" name="correo" placeholder="Correo Electrónico" required>
 
-                <input type="email"
-                       placeholder="Correo Electrónico"
-                       required>
+    <input type="text" name="asunto" placeholder="Asunto" required>
 
-                <input type="text"
-                       placeholder="Asunto"
-                       required>
+    <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
 
-                <textarea rows="6"
-                          placeholder="Escribe tu mensaje..."
-                          required></textarea>
+    <!-- Evita spam -->
+    <input type="text" name="_honey" style="display:none">
 
-                <button type="submit">
-                    Enviar Mensaje
-                </button>
+    <!-- Desactivar captcha -->
+    <input type="hidden" name="_captcha" value="false">
 
-            </form>
+    <!-- Página de redirección -->
+    <input type="hidden" name="_next" value="http://127.0.0.1:5501/html/gracias.html">
+
+    <button type="submit" class="btn-enviar">
+        📩 Enviar Mensaje
+    </button>
+
+</form>
 
         </div>
 

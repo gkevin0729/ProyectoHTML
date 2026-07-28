@@ -178,7 +178,23 @@ body{
 .contact-form button:hover{
     transform:translateY(-3px);
 }
+/*boton enviar*/
+.btn-enviar{
+    width:100%;
+    padding:15px;
+    background:#63f0d3;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
 
+.btn-enviar:hover{
+    background:#4de0c2;
+    transform:translateY(-2px);
+}
 /* ==========================
    MAPA
 ========================== */
